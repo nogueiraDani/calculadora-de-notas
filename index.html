@@ -22,11 +22,83 @@
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
     </style>
 
+    <!-- Js -->
+    <script src="./script.js" defer></script>
+
     <title>Calculadora de notas</title>
 </head>
 
 <body>
+    <header>
 
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top" style="height: 5rem;">
+            <div class="container-fluid">
+                <i class="bi bi-calculator fs-3"></i>
+                <a class="navbar-brand" href="#">Calculadora de notas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Calculadora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Histórico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- div para top-fixed -->
+    <div style="height: 5rem;"></div>
+
+    <!-- form -->
+    <form method="get" class="needs-validation " novalidate>
+
+        <!-- Inserir notas -->
+        <div class="container bg-light shadow-sm my-3 p-4 d-lg-flex d-sm-block justify-content-around">
+
+            <!-- nota1 -->
+
+            <!-- falta conferir as validações -->
+            <div class="card col-lg-3 col-sm-10 p-4 mx-auto">
+                <label for="nota1" class="mb-3 form-label">Insira aqui a nota da prova 1</label>
+                <input type="number" name="nota1" id="nota1" class="w-100 form-control" max="999" required>
+            </div>
+
+            <!-- nota2 -->
+
+            <!-- falta conferir as validações -->
+            <div class="card col-lg-3 col-sm-10 p-4 mx-auto">
+                <label for="nota2" class="mb-3 form-label">Insira aqui a nota da prova 2</label>
+                <input type="number" name="nota2" id="nota2" class="w-100 form-control" max="999" required>
+            </div>
+
+            <!-- nota3 -->
+
+            <!-- falta conferir as validações -->
+            <div class="card col-lg-3 col-sm-10 p-4 mx-auto">
+                <label for="nota3" class="mb-3 form-label">Insira aqui a nota da prova 3</label>
+                <input type="number" name="nota3" id="nota3" class="w-100 form-control" max="999" required>
+            </div>
+
+        </div>
+        <!-- button submit -->
+        <div class="container d-flex justify-content-center">
+            <button type="button" class="btn btn-dark btn-lg p-3 col-5" id="submit">Calcular</button>
+        </div>
+        <div id="resultado" class="container alert alert-dark col-10 d-flex justify-content-center mt-3 d-none p-3">
+        </div>
+    </form>
 
 </body>
 
